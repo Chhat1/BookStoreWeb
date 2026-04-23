@@ -40,15 +40,22 @@
         </div>
       </div>
 
-      <!-- Menu-Mobile -->
-      <a
-        class="d-lg-none menu-cursor"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#staticBackdrop"
-        aria-controls="staticBackdrop"
-      >
-        <i class="bi fs-1  text-light bi-list"></i>
-      </a>
+      <div class="d-flex align-content-center gap-3">
+
+        <!-- button search -->
+
+        <button class="bg-danger d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="bi bi-search fs-5 text-light fw-bold"></i></button>
+
+        <!-- Menu-Mobile -->
+        <a
+          class="d-lg-none menu-cursor"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#staticBackdrop"
+          aria-controls="staticBackdrop"
+        >
+          <i class="bi fs-1  text-light bi-list"></i>
+        </a>
+      </div>
 
       <div
         class="offcanvas offcanvas-start"
@@ -66,6 +73,11 @@
             aria-label="Close"
           ></button>
         </div>
+
+
+        
+
+
         <div class="offcanvas-body">
             <ul class="nav flex-column gap-3">
                 <li class="nav-item">
@@ -99,7 +111,26 @@
                 </p>
         </div>
     </div>
-      </div>    
+      </div>
+
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTopLabel">Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Search Input -->
+        <div class="input-group">
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search products..."
+          >
+          <button class="btn btn-dark">Search</button>
+        </div>
+              </div>
+            </div>    
+
     </nav>
   </header>
 </template>
@@ -133,6 +164,10 @@ header {
     }
     .copyright{
         margin-top: 240px !important;
+    }
+    .offcanvas-top{
+      width: 100% !important;
+      height: 150px !important;
     }
 }
 
