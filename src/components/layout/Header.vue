@@ -145,12 +145,12 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body d-flex align-items-center">
           <!-- Search Input -->
-          <div class="input-group">
+          <div class="input-group ">
             <input
               type="search"
-              class="form-control shadow-none"
+              class="form-control shadow-none py-2"
               placeholder="Search products..."
             />
             <button class="btn btn-dark">Search</button>
@@ -184,15 +184,16 @@ header {
 }
 
 @media (max-width: 576px) {
-  .offcanvas {
+  .offcanvas-start {
     width: 80% !important;
-    height: 1000px !important;
+    height: 100vh !important;
   }
   .copyright {
-    margin-top: 240px !important;
+    margin-top: auto  !important;
   }
   .offcanvas-top{
-    width: 100% !important;
+    height: auto !important;
+    min-height: 120px !important;
   }
 }
 
