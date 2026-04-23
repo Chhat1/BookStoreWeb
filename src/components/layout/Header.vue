@@ -1,9 +1,9 @@
 <template>
-  <header>
+  <header class="position-sticky top-0 z-3 border-bottom">
     <nav class="px-lg-5 px-3 d-flex justify-content-between align-items-center h-100"
     >
       <div class="logo-menu d-flex gap-5 align-items-center">
-        <div class="logo"><h4 class="mb-0 text-light">StoreBook</h4></div>
+        <div class="logo"><h3 class="mb-0">StoreBook</h3></div>
 
         <ul class="menu nav gap-4 mb-0 d-lg-flex d-none">
           <li>
@@ -28,14 +28,14 @@
       <div class="search-icons d-lg-flex d-none align-items-center gap-5">
         <div class="search">
           <input
-            class="form-control shadow-none"
+            class="form-control shadow-none py-2 px-5 fs-5"
             type="search"
             placeholder="Search books..."
           />
         </div>
         <div class="icons d-flex gap-5">
-          <i class="bi fs-3 text-light bi-person"></i>
-          <i class="bi fs-3 text-light bi-cart"></i>
+          <i class="bi fs-3 text-black bi-person"></i>
+          <i class="bi fs-3 text-black bi-cart"></i>
         </div>
       </div>
 
@@ -43,7 +43,7 @@
       <!-- Button Search and Menu-Mobile -->
       <div class="d-lg-none d-flex align-content-center align-items-center gap-3">
         <!-- button search -->
-          <i class="bi icon-search-mobile bi-search fs-5 text-light fw-bold" data-bs-toggle="offcanvas"
+          <i class="bi icon-search-mobile bi-search fs-5 text-black fw-bold" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasTop"
           aria-controls="offcanvasTop"></i>
 
@@ -54,7 +54,7 @@
           data-bs-target="#staticBackdrop"
           aria-controls="staticBackdrop"
         >
-          <i class="bi fs-1 text-light bi-list"></i>
+          <i class="bi fs-1 text-black bi-list"></i>
         </a>
       </div>
 
@@ -138,7 +138,6 @@
         aria-labelledby="offcanvasTopLabel"
       >
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasTopLabel">Search</h5>
           <button
             type="button"
             class="btn-close shadow-none"
@@ -174,10 +173,10 @@
 
 header {
   height: 10vh;
-  background: linear-gradient(50deg, #db2777, #dc2626);
+  backdrop-filter: blur(100px);
 }
 .color-link {
-  color: white;
+  color: rgb(0, 0, 0);
   transition: all 0.3s ease-in-out;
 }
 .color-link:hover {
@@ -187,13 +186,13 @@ header {
 @media (max-width: 576px) {
   .offcanvas {
     width: 80% !important;
+    height: 1000px !important;
   }
   .copyright {
     margin-top: 240px !important;
   }
-  .offcanvas-top {
+  .offcanvas-top{
     width: 100% !important;
-    height: 150px !important;
   }
 }
 
