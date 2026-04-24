@@ -61,7 +61,7 @@
             text-align: center;
         }
         .content-left{
-            margin-top: -250px !important;
+            margin-top: -200px !important;
         }
         button{
             font-size: 10px !important;
