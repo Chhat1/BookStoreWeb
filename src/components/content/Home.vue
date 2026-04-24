@@ -1,12 +1,12 @@
 <template>
-  <div class="container Home-Page mt-5 d-flex gap-5 justify-content-between align-items-center">
+  <div class="container Home-Page  d-flex gap-5 justify-content-between align-items-center">
     <div class="content-left">
-        <h6 class="mb-3 border  text-primary    rounded-5 py-lg-2 w-50 text-center " style="background-color: gainsboro; ">Spring Collection 2026</h6>
-        <h1 class="mb-3 fw-bolder" style="font-size: 70px;">Discover Your<br> Next Great Read</h1>
-        <p class="mb-3 fs-5">Explore thousands of books across all genres. From bestsellers to hidden gems, find your perfect story.</p>
-        <div class="d-flex gap-3 mt-5">
-            <button class="btn rounded-4 btn-primary py-3 px-5 fw-medium">Shop Now</button>
-            <button class="btn rounded-4 btn-close-white border fw-medium py-3 px-4">Browse Categories</button>
+        <h6 class="mb-3 border  text-primary h6-spring  rounded-5 py-lg-2 w-50 text-center " style="background-color: gainsboro; ">Spring Collection 2026</h6>
+        <h1 class="mb-3 h1-title fw-bolder" style="font-size: 70px;">Discover Your<br> Next Great Read</h1>
+        <p class="mb-3 p-des fs-5">Explore thousands of books across all genres. From bestsellers to hidden gems, find your perfect story.</p>
+        <div class="d-lg-flex gap-lg-3 d-flex justify-content-lg-start justify-content-center gap-3  mt-lg-5 mt-1">
+            <button class="btn rounded-4 btn-primary py-lg-3 px-lg-5 fw-medium">Shop Now</button>
+            <button class="btn rounded-4 btn-close-white border fw-medium py-lg-3  px-lg-4">Browse Categories</button>
         </div>
     </div>
     <div class="content-right d-lg-flex d-none  align-items-center gap-5">
@@ -45,6 +45,28 @@
 
     .Home-Page{
         height: 60vh !important;
+    }
+
+    @media (max-width: 576px){
+        .h1-title{
+            font-size: 30px !important;
+            text-align: center;
+        }
+        .h6-spring{
+            margin: auto;
+        }
+
+        .p-des{
+            font-size: 10px !important;
+            text-align: center;
+        }
+        .content-left{
+            margin-top: -250px !important;
+        }
+        button{
+            font-size: 10px !important;
+             border-radius: 10px !important;
+        }
     }
 
 </style>

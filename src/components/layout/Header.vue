@@ -173,7 +173,7 @@
 
 header {
   height: 10vh;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
 }
 .color-link {
   color: rgb(0, 0, 0);

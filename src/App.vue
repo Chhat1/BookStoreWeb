@@ -15,7 +15,7 @@
 <style scoped>
   .background-content{
     background-color: rgb(251, 249, 253);
-    height: 100vh;
+    height: 120vh;
   }
 </style>
 
