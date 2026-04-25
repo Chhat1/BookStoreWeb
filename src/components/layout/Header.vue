@@ -26,13 +26,13 @@
       </div>
 
       <div class="search-icons d-lg-flex d-none align-items-center gap-5">
-        <div class="search">
+        <!-- <div class="search">
           <input
             class="form-control shadow-none py-2 px-5 fs-5"
             type="search"
             placeholder="Search books..."
           />
-        </div>
+        </div> -->
         <div class="icons d-flex gap-5">
           <i class="bi fs-3 text-black bi-person"></i>
           <i class="bi fs-3 text-black bi-cart"></i>
@@ -42,11 +42,7 @@
 
       <!-- Button Search and Menu-Mobile -->
       <div class="d-lg-none d-flex align-content-center align-items-center gap-3">
-        <!-- button search -->
-          <i class="bi icon-search-mobile bi-search fs-5 text-black fw-bold" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasTop"
-          aria-controls="offcanvasTop"></i>
-
+        
         <!-- Menu-Mobile -->
         <a
           class="d-lg-none menu-cursor"
@@ -122,7 +118,7 @@
               &copy; 2026 StoreBook. All rights reserved.
             </p>
             <p class="text-muted" style="font-size: 0.75rem">
-              Designed with <i class="bi bi-heart-fill text-danger"></i> by You
+              Designed with <i class="bi bi-heart-fill text-danger"></i> by PHUK RICHHAT
             </p>
           </div>
         </div>
@@ -130,33 +126,7 @@
 
 
 
-      <!-- Offcanvas Search Bar -->
-      <div
-        class="offcanvas offcanvas-top"
-        tabindex="-1"
-        id="offcanvasTop"
-        aria-labelledby="offcanvasTopLabel"
-      >
-        <div class="offcanvas-header">
-          <button
-            type="button"
-            class="btn-close shadow-none"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body d-flex align-items-center">
-          <!-- Search Input -->
-          <div class="input-group ">
-            <input
-              type="search"
-              class="form-control shadow-none py-2"
-              placeholder="Search products..."
-            />
-            <button class="btn btn-dark">Search</button>
-          </div>
-        </div>
-      </div>
+      
   </header>
 </template>
 
