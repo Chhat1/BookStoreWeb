@@ -22,10 +22,10 @@
         
 
         <div class="d-flex gap-3 mt-4 justify-content-center justify-content-lg-start flex-wrap">
-          <button class="btn btn-primary px-4 py-2 rounded-3">
+          <a href="#products" class="btn btn-primary px-4 py-2 rounded-3">
             Shop Now
-          </button>
-          <button class="btn border px-4 py-2 rounded-3">
+          </a>
+          <button class="btn border px-4 py-2 rounded-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Browse Categories
           </button>
         </div>
@@ -58,7 +58,7 @@
 
 
         <!-- SEARCH -->
-        <div class="d-flex gap-2 mb-5 mt-3 justify-content-center justify-content-lg-start">
+        <div class="d-flex gap-2 mb-lg-5 mb-4 mt-3 justify-content-center justify-content-lg-start">
           <input v-model="search"
                  @keyup.enter="fetchBooks"
                  type="text"
@@ -74,7 +74,7 @@
       </div>
 
       <!-- GRID -->
-      <div class="row g-4">
+      <div class="row g-4" id="products">
 
         <div v-for="(book, index) in books.slice(0, 8)"
              :key="index"
@@ -105,7 +105,7 @@
                 </span>
 
                 <button class="btn btn-sm btn-primary rounded-circle"
-                        style="width:35px; height:35px;">
+                        style="width:35px; height:35px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <i class="bi bi-cart"></i>
                 </button>
               </div>
@@ -119,6 +119,45 @@
     </div>
 
   </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+
+      <!-- Header -->
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold text-primary">
+          Notification
+        </h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body text-center py-4">
+        <div class="mb-3">
+          <i class="bi bi-exclamation-circle text-warning" style="font-size: 50px;"></i>
+        </div>
+        <h5 class="fw-semibold">No Data Available</h5>
+        <p class="text-muted small">
+          Sorry, there is currently no content to display.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 d-flex justify-content-center gap-3 pb-4">
+        <button type="button" class="btn btn-light px-4 rounded-pill" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary px-4 rounded-pill shadow-sm">
+          Retry
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 </template>
 
 <script setup>

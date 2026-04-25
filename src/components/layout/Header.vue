@@ -20,7 +20,7 @@
             >
           </li>
           <li>
-            <a class="text-decoration-none color-link fs-5" href="">Deals</a>
+            <a class="text-decoration-none color-link fs-5" href="" >Deals</a>
           </li>
         </ul>
       </div>
@@ -34,8 +34,8 @@
           />
         </div> -->
         <div class="icons d-flex gap-5">
-          <i class="bi fs-3 text-black bi-person"></i>
-          <i class="bi fs-3 text-black bi-cart"></i>
+          <i class="bi fs-3 text-black bi-person" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+          <i class="bi fs-3 text-black bi-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
         </div>
       </div>
 
@@ -81,33 +81,33 @@
           <ul class="nav flex-column gap-3">
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 p-0" href="#"
-                ><i class="bi bi-house-door me-2"></i> Browse</a
+                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-house-door me-2"></i> Browse</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 p-0" href="#"
-                ><i class="bi bi-star me-2"></i> Bestseller</a
+                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-star me-2"></i> Bestseller</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 p-0" href="#"
-                ><i class="bi bi-clock-history me-2"></i> New Arrival</a
+                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-clock-history me-2"></i> New Arrival</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 p-0" href="#"
-                ><i class="bi bi-tags me-2"></i> Deals</a
+                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-tags me-2"></i> Deals</a
               >
             </li>
             <hr />
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 p-0" href="#"
-                ><i class="bi bi-person me-2"></i> Account</a
+                 data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="bi bi-person me-2"></i> Account</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark fs-5 p-0" href="#"
-                ><i class="bi bi-cart me-2"></i> Cart</a
+                 data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-cart me-2"></i> Cart</a
               >
             </li>
           </ul>
@@ -128,6 +128,44 @@
 
       
   </header>
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+
+      <!-- Header -->
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold text-primary">
+          Notification
+        </h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body text-center py-4">
+        <div class="mb-3">
+          <i class="bi bi-exclamation-circle text-warning" style="font-size: 50px;"></i>
+        </div>
+        <h5 class="fw-semibold">No Data Available</h5>
+        <p class="text-muted small">
+          Sorry, there is currently no content to display.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 d-flex justify-content-center gap-3 pb-4">
+        <button type="button" class="btn btn-light px-4 rounded-pill" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary px-4 rounded-pill shadow-sm">
+          Retry
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
 </template>
 
 <script setup>
